@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Хранители древних реликвий — платформер</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="heading">
+      <div>
+        <p class="eyebrow">ХРОНИКИ СТАРОГО КОРОЛЕВСТВА · ГЛАВА I</p>
+        <h1>Хранители древних реликвий</h1>
+        <p class="subtitle">Пройди по руинам крепости, верни реликвии и пробуди врата Хранителей.</p>
+      </div>
+      <div class="stats" aria-live="polite">
+        <span>Артефакты <strong id="score">0 / 3</strong></span>
+        <span>Рекорд <strong id="best">0</strong></span>
+      </div>
+    </header>
+
+    <section class="game-card">
+      <div class="canvas-wrap">
+        <canvas id="game" width="960" height="540" aria-label="Игровое поле"></canvas>
+        <div id="overlay" class="overlay">
+          <div class="overlay-panel">
+            <p class="eyebrow">ЗАБЫТЫЕ РУИНЫ</p>
+            <h2 id="overlay-title">Легенда начинается</h2>
+            <p id="overlay-text">Три реликвии скрыты среди руин. Собери их, избегай огненной бездны и открой древние врата.</p>
+            <button id="start-btn" class="primary">Старт</button>
+          </div>
+        </div>
+      </div>
+      <div class="toolbar">
+        <div class="controls-hint"><b>Управление:</b> ← → / A D — движение · Space / W / ↑ — прыжок</div>
+        <div class="buttons">
+          <button id="pause-btn" disabled>Пауза</button>
+          <button id="restart-btn">Заново</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="mobile-controls" aria-label="Сенсорное управление">
+      <div class="move-buttons">
+        <button data-control="left" aria-label="Влево">◀</button>
+        <button data-control="right" aria-label="Вправо">▶</button>
+      </div>
+      <button data-control="jump" class="jump" aria-label="Прыжок">ПРЫЖОК ⤴</button>
+    </section>
+
+    <footer>
+      <span>Прыжок доступен только с опоры. Собранные реликвии сохраняются в счёте.</span>
+      <span>Хранительница крепости · Canvas / JavaScript</span>
+    </footer>
+  </main>
+  <script src="./game.bundle.js"></script>
+</body>
+</html>
